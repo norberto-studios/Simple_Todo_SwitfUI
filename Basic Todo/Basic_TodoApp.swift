@@ -12,6 +12,7 @@ struct Basic_TodoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(DataStore())
         }
     }
 }
