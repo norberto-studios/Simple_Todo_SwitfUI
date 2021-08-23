@@ -10,18 +10,23 @@ import SwiftUI
 
 struct TodoList: View {
     @EnvironmentObject var dataStore: DataStore
+    @State private var modalType: ModalType? = nil
     
     var body: some View {
         
         NavigationView{
             List() {
-                ForEach(dataStore.todoItem) { todo in
-            
-                    Text(todo.name)
-                        .font(.title3)
-                        .strikethrough(todo.completed)
-                        .foregroundColor(todo.completed ? .green : .blue)
+                ForEach(dataStore.todoItems) { todo in
+                    Button {
+                        modalType = .update(todo)
+                    } label : {
+                        Text(todo.name)
+                            .font(.title3)
+                            .strikethrough(todo.completed)
+                            .foregroundColor(todo.completed ? .green : .blue)
+                    }
                 }
+                .onDelete(perform: dataStore.deleteTodo )
             }
             .listStyle(InsetGroupedListStyle())
             .toolbar {
@@ -32,19 +37,21 @@ struct TodoList: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button{
-                        
-                    } label:{
+                        modalType = .new
+                    } label: {
                         
                         Image(systemName: "plus.circle.fill")
                         
                     }
                 }
             }
-//            .navigationBarItems(trailing: NavigationLink(destination: TodoList()){
-//                Text("Add")
-//            })
-        }
 
+        }
+        .sheet(item: $modalType) { $0 }
+        .alert(item: $dataStore.appError) {
+            appError in
+            Alert(title: Text("OH OH"), message: Text(appError.error.localizedDescription))
+        }
     }
 }
 

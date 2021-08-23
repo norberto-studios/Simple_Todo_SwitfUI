@@ -16,6 +16,9 @@
 		CCB976C526CCD4A50047DD54 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB976C426CCD4A50047DD54 /* DataStore.swift */; };
 		CCB976C726CCDB700047DD54 /* TodoForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB976C626CCDB700047DD54 /* TodoForm.swift */; };
 		CCB976C926CCDCBE0047DD54 /* TodoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB976C826CCDCBE0047DD54 /* TodoFormView.swift */; };
+		CCE2DF8626D2EC5B005A734B /* ModalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2DF8526D2EC5B005A734B /* ModalType.swift */; };
+		CCE2DF8926D32F1B005A734B /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2DF8826D32F1B005A734B /* FileManager+Extension.swift */; };
+		CCE2DF8B26D33A01005A734B /* TodoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2DF8A26D33A01005A734B /* TodoError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		CCB976C426CCD4A50047DD54 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		CCB976C626CCDB700047DD54 /* TodoForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoForm.swift; sourceTree = "<group>"; };
 		CCB976C826CCDCBE0047DD54 /* TodoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFormView.swift; sourceTree = "<group>"; };
+		CCE2DF8526D2EC5B005A734B /* ModalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalType.swift; sourceTree = "<group>"; };
+		CCE2DF8826D32F1B005A734B /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		CCE2DF8A26D33A01005A734B /* TodoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		CCB976AB26CCCB920047DD54 /* Basic Todo */ = {
 			isa = PBXGroup;
 			children = (
+				CCE2DF8726D32EDC005A734B /* Extensions */,
 				CCB976C326CCD48B0047DD54 /* ViewModal */,
 				CCB976BE26CCCC440047DD54 /* Views */,
 				CCB976BD26CCCC150047DD54 /* Resources */,
@@ -86,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				CCB976BF26CCCDDB0047DD54 /* TodoItem.swift */,
+				CCE2DF8526D2EC5B005A734B /* ModalType.swift */,
+				CCE2DF8A26D33A01005A734B /* TodoError.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -114,6 +123,14 @@
 				CCB976C626CCDB700047DD54 /* TodoForm.swift */,
 			);
 			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		CCE2DF8726D32EDC005A734B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCE2DF8826D32F1B005A734B /* FileManager+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +203,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB976C926CCDCBE0047DD54 /* TodoFormView.swift in Sources */,
+				CCE2DF8626D2EC5B005A734B /* ModalType.swift in Sources */,
 				CCB976AF26CCCB920047DD54 /* ContentView.swift in Sources */,
 				CCB976C026CCCDDB0047DD54 /* TodoItem.swift in Sources */,
 				CCB976AD26CCCB920047DD54 /* Basic_TodoApp.swift in Sources */,
 				CCB976C526CCD4A50047DD54 /* DataStore.swift in Sources */,
 				CCB976C226CCCEBD0047DD54 /* TodoList.swift in Sources */,
 				CCB976C726CCDB700047DD54 /* TodoForm.swift in Sources */,
+				CCE2DF8B26D33A01005A734B /* TodoError.swift in Sources */,
+				CCE2DF8926D32F1B005A734B /* FileManager+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
